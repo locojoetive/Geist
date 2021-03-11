@@ -15,9 +15,14 @@ int main(int argc, const char* argv[]) {
 	game->init("Geist", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 940, 600, false);
 	while (game -> running()) 
 	{
+		// TODO: (1) handle any user input
 		frameStart = SDL_GetTicks();
 		game -> handleEvents();
+
+		// (2) update all object eg positions etc
 		game -> update();
+		
+		// (3) render changes to the display
 		game -> render();
 
 		frameTime = SDL_GetTicks() - frameStart;
@@ -26,9 +31,6 @@ int main(int argc, const char* argv[]) {
 		{
 			SDL_Delay(frameDelay - frameTime);
 		}
-		// (1) handle any user input
-		// (2) update all object eg positions etc
-		// (3) render changes to the display
 	}
 	return 0;
 }
