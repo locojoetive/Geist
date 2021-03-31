@@ -1,7 +1,6 @@
 #include <iostream>
-#include "Game.h"
+#include "Game/Game.h"
 
-Game* game = nullptr;
 
 int main(int argc, const char* argv[]) {
 
@@ -11,7 +10,7 @@ int main(int argc, const char* argv[]) {
 	Uint32 frameStart;
 	int frameTime;
 
-	game = new Game();
+	GameSpace::Game* game = new GameSpace::Game();
 	game->init("Geist", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 940, 600, false);
 	while (game -> running()) 
 	{
@@ -32,5 +31,24 @@ int main(int argc, const char* argv[]) {
 			SDL_Delay(frameDelay - frameTime);
 		}
 	}
+	return 0;
+}
+
+struct StructA {
+	int a;
+	char b;
+};
+
+int operator^(StructA a, StructA b) {
+	return a.a - b.a;
+}
+
+int main0 ()
+{
+	StructA a;
+	StructA b;
+	a.a = 14;
+	b.a = 5;
+	std::cout << (a ^ b) << std::endl;
 	return 0;
 }
