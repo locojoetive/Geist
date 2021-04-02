@@ -96,6 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,6 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,18 +160,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Game\GameObject\GameObject.cpp" />
-    <ClCompile Include="src\Game\GameObject\TextureManager\TextureManager.cpp" />
+    <ClCompile Include="src\GameSpace\Game.cpp" />
+    <ClCompile Include="src\GameSpace\GameObject\GameObject.cpp" />
+    <ClCompile Include="src\GameSpace\GameObject\TextureManager\TextureManager.cpp" />
+    <ClCompile Include="src\GameSpace\Map.cpp" />
     <ClCompile Include="src\Log.cpp" />
+    <ClCompile Include="src\Maf\Vector.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClInclude Include="src\Game\Game.cpp" />
-    <ClInclude Include="src\Game\GameObject\GameObject.h" />
-    <ClInclude Include="src\Game\GameObject\TextureManager\TextureManager.h" />
+    <ClInclude Include="src\GameSpace\Game.h" />
+    <ClInclude Include="src\GameSpace\GameObject\GameObject.h" />
+    <ClInclude Include="src\GameSpace\GameObject\TextureManager\TextureManager.h" />
+    <ClInclude Include="src\GameSpace\Map.h" />
     <ClInclude Include="src\Log.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Game\Game.h" />
     <ClCompile Include="src\Maf\Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\dirt.png" />
+    <Image Include="assets\enemy.png" />
+    <Image Include="assets\grass.png" />
+    <Image Include="assets\sword_0.png" />
+    <Image Include="assets\water.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

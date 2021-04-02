@@ -7,15 +7,16 @@ namespace GameSpace {
 	class GameObject
 	{
 	public:
-		GameObject(const char*, SDL_Renderer*, Maf::Vector*);
+		GameObject(const char*, int, int);
 		~GameObject();
+
+		Maf::Vector* position;
+		
 		void Update();
 		void Render();
 
 	private:
-		Maf::Vector position;
 		SDL_Texture* texture;
 		SDL_Rect srcRect, destRect;
-		SDL_Renderer* renderer;
 	};
 }

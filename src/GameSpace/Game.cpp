@@ -1,18 +1,16 @@
 #include "Game.h"
-
 #include "GameObject/TextureManager/TextureManager.h"
+#include "Map.h"
 
 namespace GameSpace {
-	Game::Game() {
-		window = nullptr;
-		renderer = nullptr;
-		player = nullptr;
-		isRunning = false;
-	}
+	GameObject* player;
+	GameObject* enemy;
+	SDL_Renderer* Game::renderer = nullptr;
+	Map* map;
 
-	Game::~Game() {
+	Game::Game() {}
 
-	}
+	Game::~Game() {}
 
 	void Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 	{
@@ -38,13 +36,14 @@ namespace GameSpace {
 				std::cout << "Renderer created!" << std::endl;
 			}
 			isRunning = true;
+			player = new GameObject("assets/sword_0.png", 0, 0);
+			enemy = new GameObject("assets/enemy.png", 64, 64);
+			map = new Map();
 		}
 		else {
 			isRunning = false;
 		}
 
-		Maf::Vector* startPos = new Maf::Vector(0, 0);
-		player = new GameObject("assets/sword/sword_0.png", renderer, startPos);
 	}
 
 	void Game::handleEvents()
@@ -62,22 +61,20 @@ namespace GameSpace {
 
 	void Game::update()
 	{
-		count++;
-
-		// Sword
 		player->Update();
-
-		std::cout << count << std::endl;
+		enemy->Update();
 	}
 
 	void Game::render()
 	{
 		SDL_RenderClear(renderer);
-		// Sword
+		
+		map->DrawMap();
 		player->Render();
+		enemy->Render();
 		SDL_RenderPresent(renderer);
 	}
-
+	  
 	void Game::clean()
 	{
 		SDL_DestroyWindow(window);

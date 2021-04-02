@@ -1,6 +1,7 @@
 #include <iostream>
-#include "Game/Game.h"
+#include "GameSpace/Game.h"
 
+using namespace GameSpace;
 
 int main(int argc, const char* argv[]) {
 
@@ -10,8 +11,8 @@ int main(int argc, const char* argv[]) {
 	Uint32 frameStart;
 	int frameTime;
 
-	GameSpace::Game* game = new GameSpace::Game();
-	game->init("Geist", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 940, 600, false);
+	Game* game = new Game();
+	game->init("Geist", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 940, 640, false);
 	while (game -> running()) 
 	{
 		// TODO: (1) handle any user input

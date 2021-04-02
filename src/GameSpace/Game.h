@@ -21,11 +21,10 @@ namespace GameSpace {
 		void clean();
 		bool running() { return isRunning; }
 
+		static SDL_Renderer* renderer;
 	private:
 		int count = 0;
-		bool isRunning;
+		bool isRunning = false;
 		SDL_Window* window;
-		SDL_Renderer* renderer;
-		GameObject* player;
 	};
 }
