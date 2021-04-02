@@ -56,6 +56,10 @@
     <ClInclude Include="src\GameSpace\Map.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="ECS.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\dirt.png">
