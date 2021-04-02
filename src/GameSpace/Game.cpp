@@ -1,12 +1,18 @@
 #include "Game.h"
 #include "GameObject/TextureManager/TextureManager.h"
 #include "Map.h"
+#include "../../ECS.h"
+#include "../../Components.h"
+
 
 namespace GameSpace {
 	GameObject* player;
 	GameObject* enemy;
 	SDL_Renderer* Game::renderer = nullptr;
 	Map* map;
+
+	Manager manager;
+	auto& newPlayer(manager.addEntity());
 
 	Game::Game() {}
 
@@ -39,6 +45,8 @@ namespace GameSpace {
 			player = new GameObject("assets/sword_0.png", 0, 0);
 			enemy = new GameObject("assets/enemy.png", 64, 64);
 			map = new Map();
+
+			newPlayer.addComponent<Transform>();
 		}
 		else {
 			isRunning = false;
@@ -63,6 +71,8 @@ namespace GameSpace {
 	{
 		player->Update();
 		enemy->Update();
+		manager.update();
+		std::cout << newPlayer.getComponent<Transform>().position.X << ", " << newPlayer.getComponent<Transform>().position.Y << std::endl;
 	}
 
 	void Game::render()
