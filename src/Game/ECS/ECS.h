@@ -53,10 +53,11 @@ private:
 public:
 	void update() {
 		for (auto& component : components) component->update();
-		for (auto& component : components) component->draw();
 	}
 
-	void draw() {}
+	void draw() {
+		for (auto& component : components) component->draw();
+	}
 	bool isActive() const { return active; }
 	void destroy() { active = false; }
 
@@ -92,7 +93,9 @@ class Manager
 public:
 	void update()
 	{
-		for (auto& e : entities) e->update();
+		for (auto& e : entities) {
+			e->update();
+		}
 	}
 
 	void draw()
@@ -107,7 +110,7 @@ public:
 			std::end(entities),
 			[](const std::unique_ptr<Entity>& mEntity)
 			{
-				return mEntity->isActive();
+				return !mEntity->isActive();
 			}),
 			std::end(entities)
 		);
@@ -120,7 +123,6 @@ public:
 		entities.emplace_back(std::move(uPtr));
 		return *e;
 	}
-
 private:
 	std::vector<std::unique_ptr<Entity>> entities;
 };

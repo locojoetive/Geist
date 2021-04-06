@@ -7,28 +7,22 @@
     <Filter Include="src">
       <UniqueIdentifier>{c7140c9f-c4e8-48e5-b23b-18cbfc9a6672}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\GameSpace">
-      <UniqueIdentifier>{edcdbffb-ac94-4b75-ad8d-49d24e2e6d3f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Maf">
       <UniqueIdentifier>{2545e925-fba1-49da-b403-eddff173ceee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Maf\Vector.h">
+    <ClCompile Include="src\Maf\Vector2D.h">
       <Filter>src\Maf</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameSpace\Game.cpp">
-      <Filter>src\GameSpace</Filter>
+    <ClCompile Include="src\Game\Game.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameSpace\GameObject\GameObject.cpp">
-      <Filter>src\GameSpace</Filter>
+    <ClCompile Include="src\Game\GameObject\GameObject.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameSpace\GameObject\TextureManager\TextureManager.cpp">
-      <Filter>src\GameSpace</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Maf\Vector.cpp">
-      <Filter>src\Maf</Filter>
+    <ClCompile Include="src\Game\Map\Map.cpp">
+      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
@@ -36,30 +30,10 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameSpace\Map.cpp">
+    <ClCompile Include="src\Game\TextureManager\TextureManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Log.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameSpace\Game.h">
-      <Filter>src\GameSpace</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameSpace\GameObject\GameObject.h">
-      <Filter>src\GameSpace</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameSpace\GameObject\TextureManager\TextureManager.h">
-      <Filter>src\GameSpace</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GameSpace\Map.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="ECS.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="Components.h" />
+    <ClCompile Include="src\Maf\Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\dirt.png">
@@ -74,8 +48,37 @@
     <Image Include="assets\enemy.png">
       <Filter>assets</Filter>
     </Image>
-    <Image Include="assets\sword_0.png">
+    <Image Include="assets\sword.png">
       <Filter>assets</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Game\ECS\Components\Sprite.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\ECS\Components\Transform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\ECS\ECS.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObject\GameObject.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\TextureManager\TextureManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Map\Map.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Log.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\ECS\Components\Components.h" />
+    <ClInclude Include="src\Game\ECS\Components\KeyboardController.h" />
+    <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
   </ItemGroup>
 </Project>

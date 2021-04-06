@@ -1,7 +1,6 @@
 #include <iostream>
-#include "GameSpace/Game.h"
+#include "Game/Game.h"
 
-using namespace GameSpace;
 
 int main(int argc, const char* argv[]) {
 
