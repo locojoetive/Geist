@@ -160,6 +160,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Collision2D.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
     <ClCompile Include="src\Game\GameObject\GameObject.cpp" />
     <ClCompile Include="src\Game\Map\Map.cpp" />
@@ -177,6 +178,7 @@
     <Image Include="assets\water.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Collision2D.h" />
     <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
     <ClInclude Include="src\Game\ECS\Components\Components.h" />
     <ClInclude Include="src\Game\ECS\Components\Sprite.h" />

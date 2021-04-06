@@ -34,6 +34,7 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Maf\Vector2D.cpp" />
+    <ClCompile Include="src\Collision2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\dirt.png">
@@ -80,5 +81,6 @@
     <ClInclude Include="src\Game\ECS\Components\Components.h" />
     <ClInclude Include="src\Game\ECS\Components\KeyboardController.h" />
     <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
+    <ClInclude Include="src\Collision2D.h" />
   </ItemGroup>
 </Project>

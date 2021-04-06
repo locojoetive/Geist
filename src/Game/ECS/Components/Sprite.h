@@ -1,9 +1,9 @@
 #pragma once
 
+#include <SDL.h>
 #include "Components.h"
 #include "../../TextureManager/TextureManager.h"
 #include "../../../Maf/Vector2D.h"
-#include <SDL.h>
 
 class Sprite : public Component
 {
@@ -17,6 +17,10 @@ public:
 	{
 		setTexture(path);
 	}
+	~Sprite() 
+	{
+		SDL_DestroyTexture(texture);
+	}
 
 	void setTexture(const char* path) 
 	{
@@ -28,14 +32,16 @@ public:
 		transform = &entity->getComponent<Transform>();
 
 		srcRect.x = srcRect.y = 0;
-		srcRect.w = srcRect.h = 32;
-		destRect.w = destRect.h = 64;
+		srcRect.w = transform->width;
+		srcRect.h = transform->height;
 	}
 
 	void update() override
 	{
 		destRect.x = (int) transform->position.X;
 		destRect.y = (int) transform->position.Y;
+		destRect.w = transform->width * transform->scale;
+		destRect.h = transform->height* transform->scale;
 	}
 
 	void draw() override 
