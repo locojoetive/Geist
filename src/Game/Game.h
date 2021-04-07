@@ -4,7 +4,9 @@
 #undef main
 #include <SDL_image.h>
 #include <iostream>
-#include "GameObject/GameObject.h"
+#include <vector>
+
+class Collider2D;
 
 class Game
 {
@@ -21,6 +23,7 @@ public:
 
 	static SDL_Renderer* renderer;
 	static SDL_Event event;
+	static std::vector<Collider2D*> colliders;
 private:
 	int count = 0;
 	bool isRunning = false;

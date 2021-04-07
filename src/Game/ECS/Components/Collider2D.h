@@ -4,6 +4,7 @@
 #include <string>
 #include <SDL.h>
 #include "Components.h"
+#include "../../Game.h"
 
 class Collider2D : public Component
 {
@@ -23,6 +24,8 @@ public:
 			entity->addComponent<Transform>();
 		}
 		transform = &entity->getComponent<Transform>();
+
+		Game::colliders.push_back(this);
 	}
 
 	void update() override

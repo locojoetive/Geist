@@ -1,6 +1,7 @@
 #pragma once
-#include "Components.h"
+
 #include "../../../Maf/Vector2D.h"
+#include "Components.h"
 
 class Transform : public Component
 {

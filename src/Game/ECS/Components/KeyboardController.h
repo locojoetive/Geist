@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Components.h"
-#include "../ECS.h"
 #include "../../Game.h"
+#include "../ECS.h"
+#include "Components.h"
 
 class KeyboardController : public Component
 {

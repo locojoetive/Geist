@@ -160,12 +160,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Collision2D.cpp" />
+    <ClCompile Include="src\Game\Collision2D\Collision2D.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
-    <ClCompile Include="src\Game\GameObject\GameObject.cpp" />
+    <ClCompile Include="src\Game\ECS\Entities\GameObject\GameObject.cpp" />
     <ClCompile Include="src\Game\Map\Map.cpp" />
     <ClCompile Include="src\Game\TextureManager\TextureManager.cpp" />
-    <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="src\Maf\Vector2D.cpp" />
     <ClCompile Include="src\Maf\Vector2D.h" />
     <ClCompile Include="src\main.cpp" />
@@ -178,18 +177,18 @@
     <Image Include="assets\water.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Collision2D.h" />
+    <ClInclude Include="src\Game\Collision2D\Collision2D.h" />
     <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
     <ClInclude Include="src\Game\ECS\Components\Components.h" />
     <ClInclude Include="src\Game\ECS\Components\Sprite.h" />
+    <ClInclude Include="src\Game\ECS\Components\Tile.h" />
     <ClInclude Include="src\Game\ECS\Components\Transform.h" />
     <ClInclude Include="src\Game\ECS\ECS.h" />
     <ClInclude Include="src\Game\Game.h" />
-    <ClInclude Include="src\Game\GameObject\GameObject.h" />
+    <ClInclude Include="src\Game\ECS\Entities\GameObject\GameObject.h" />
     <ClInclude Include="src\Game\ECS\Components\KeyboardController.h" />
     <ClInclude Include="src\Game\Map\Map.h" />
     <ClInclude Include="src\Game\TextureManager\TextureManager.h" />
-    <ClInclude Include="src\Log.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

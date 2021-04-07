@@ -1,9 +1,9 @@
 #pragma once
 
 #include <SDL.h>
-#include "Components.h"
-#include "../../TextureManager/TextureManager.h"
 #include "../../../Maf/Vector2D.h"
+#include "../../TextureManager/TextureManager.h"
+#include "Components.h"
 
 class Sprite : public Component
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Game.h"
-#include "../../Maf/Vector2D.h"
+#include "../../../../Maf/Vector2D.h"
+#include "../../../Game.h"
 
 class GameObject
 {

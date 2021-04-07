@@ -1,5 +1,5 @@
+#include "../../../TextureManager/TextureManager.h"
 #include "GameObject.h"
-#include "../TextureManager/TextureManager.h"
 
 GameObject::GameObject(const char* textureSrcPath, int x, int y)
 {

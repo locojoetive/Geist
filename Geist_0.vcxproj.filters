@@ -18,13 +18,10 @@
     <ClCompile Include="src\Game\Game.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Game\GameObject\GameObject.cpp">
+    <ClCompile Include="src\Game\ECS\Entities\GameObject\GameObject.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Game\Map\Map.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
@@ -34,7 +31,7 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Maf\Vector2D.cpp" />
-    <ClCompile Include="src\Collision2D.cpp" />
+    <ClCompile Include="src\Game\Collision2D\Collision2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\dirt.png">
@@ -66,7 +63,7 @@
     <ClInclude Include="src\Game\Game.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Game\GameObject\GameObject.h">
+    <ClInclude Include="src\Game\ECS\Entities\GameObject\GameObject.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Game\TextureManager\TextureManager.h">
@@ -75,12 +72,10 @@
     <ClInclude Include="src\Game\Map\Map.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Log.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\Game\ECS\Components\Components.h" />
     <ClInclude Include="src\Game\ECS\Components\KeyboardController.h" />
     <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
-    <ClInclude Include="src\Collision2D.h" />
+    <ClInclude Include="src\Game\Collision2D\Collision2D.h" />
+    <ClInclude Include="src\Game\ECS\Components\Tile.h" />
   </ItemGroup>
 </Project>
