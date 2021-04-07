@@ -15,11 +15,11 @@ public:
 	int scale = 1;
 
 	Transform() {
-		position = Vector2D();
+		position.Zero();
 	}
 
 	Transform(int _scale) {
-		position = Vector2D();
+		position.Zero();
 		scale = _scale;
 	}
 
@@ -36,7 +36,7 @@ public:
 
 	void init() override
 	{
-		velocity = Vector2D(0,0);
+		velocity.Zero();
 	}
 
 	void update() override
