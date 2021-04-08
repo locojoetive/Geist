@@ -393,3 +393,4 @@ FodyWeavers.xsd
 *.exe
 *.out
 *.app
+/assets/p16x16.map

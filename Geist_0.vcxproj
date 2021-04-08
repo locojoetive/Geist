@@ -161,6 +161,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Game\Collision2D\Collision2D.cpp" />
+    <ClCompile Include="src\Game\ECS\ECS.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
     <ClCompile Include="src\Game\ECS\Entities\GameObject\GameObject.cpp" />
     <ClCompile Include="src\Game\Map\Map.cpp" />
@@ -189,6 +190,9 @@
     <ClInclude Include="src\Game\ECS\Components\KeyboardController.h" />
     <ClInclude Include="src\Game\Map\Map.h" />
     <ClInclude Include="src\Game\TextureManager\TextureManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="assets\p16x16.map" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

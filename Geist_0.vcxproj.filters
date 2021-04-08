@@ -32,6 +32,7 @@
     </ClCompile>
     <ClCompile Include="src\Maf\Vector2D.cpp" />
     <ClCompile Include="src\Game\Collision2D\Collision2D.cpp" />
+    <ClCompile Include="src\Game\ECS\ECS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\dirt.png">
@@ -77,5 +78,8 @@
     <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
     <ClInclude Include="src\Game\Collision2D\Collision2D.h" />
     <ClInclude Include="src\Game\ECS\Components\Tile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="assets\p16x16.map" />
   </ItemGroup>
 </Project>
