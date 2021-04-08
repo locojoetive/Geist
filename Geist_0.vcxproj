@@ -179,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game\Collision2D\Collision2D.h" />
+    <ClInclude Include="src\Game\ECS\Components\Animation.h" />
     <ClInclude Include="src\Game\ECS\Components\Collider2D.h" />
     <ClInclude Include="src\Game\ECS\Components\Components.h" />
     <ClInclude Include="src\Game\ECS\Components\Sprite.h" />

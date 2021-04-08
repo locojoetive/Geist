@@ -57,7 +57,9 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		Map::LoadMap("assets/p16x16.map", 16, 16);
 		
 		player.addComponent<Transform>(2);
-		player.addComponent<Sprite>("assets/sword.png");
+		player.getComponent<Transform>().width = 16;
+		player.getComponent<Transform>().height = 16;
+		player.addComponent<Sprite>("assets/ghost_spritesheet.png", true);
 		player.addComponent<KeyboardController>();
 		player.addComponent<Collider2D>("player");
 		player.addGroup(groupPlayers);
