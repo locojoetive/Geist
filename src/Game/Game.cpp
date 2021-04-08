@@ -64,10 +64,12 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		player.addComponent<Collider2D>("player");
 		player.addGroup(groupPlayers);
 
+		/*
 		wall.addComponent<Transform>(300, 300, 300, 20, 1);
 		wall.addComponent<Sprite>("assets/dirt.png");
 		wall.addComponent<Collider2D>("wall");
 		wall.addGroup(groupMap);
+		*/
 	}
 	else {
 		isRunning = false;
